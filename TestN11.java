@@ -22,7 +22,7 @@ public class test2 {
         WebElement searchButton = driver.findElement(new By.ByCssSelector(".searchBtn"));
         searchButton.click();
 
-        //driver.quit();
+        driver.quit();
 
     }
 }
