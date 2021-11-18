@@ -25,7 +25,7 @@ public class TestTrendyol {
 
         String title2 = driver.getTitle();
 
-        if(title != title2){
+        if(!title.equals(title2)){
             System.out.println("Test başarılı!");
         }
         else{
