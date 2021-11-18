@@ -13,6 +13,8 @@ public class TestTrendyol {
         driver.get("https://www.trendyol.com/butik/liste/1/kadin");
         driver.manage().window().maximize();
 
+        String title = driver.getTitle();
+
         WebElement search = driver.findElement(new By.ByCssSelector(".search-box"));
         search.click();
         search.sendKeys("filtre kahve makinesi");
@@ -20,6 +22,15 @@ public class TestTrendyol {
         WebElement searchButton = driver.findElement(new By.ByCssSelector(".search-icon"));
         Thread.sleep(1000);
         searchButton.click();
+
+        String title2 = driver.getTitle();
+
+        if(title != title2){
+            System.out.println("Test başarılı!");
+        }
+        else{
+            System.out.println("Test başarısız!");
+        }
 
         //driver.quit();
 
