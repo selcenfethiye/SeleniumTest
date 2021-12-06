@@ -127,7 +127,7 @@ public class TestEmlak {
         Thread.sleep(2000);
         deleteAdvertPage.click();
 
-        WebElement deleteButton = driver.findElement(By.id("29"));
+        WebElement deleteButton = driver.findElement(By.id("30"));
         Thread.sleep(2000);
         deleteButton.click();
 
@@ -135,9 +135,25 @@ public class TestEmlak {
         Thread.sleep(2000);
         changeAdvertActiviyPage.click();
 
-        driver.findElement(By.xpath("//*[@id=\"1\"][@class=\"select\"]")).click();
-        driver.findElement(By.xpath("//*[@id=\"1\"]/option[2]")).click();
-        driver.findElement(By.xpath("//*[@id=\"1\"][@class=\"button\"]")).click();
+        WebElement changeAdvertActivityBox = driver.findElement(By.xpath("//*[@id=\"1\"][@class=\"select\"]"));
+        Thread.sleep(2000);
+        changeAdvertActivityBox.click();
+
+        WebElement changeOption1 = driver.findElement(By.xpath("//*[@id=\"1\"]/option[1]"));
+        Thread.sleep(2000);
+        changeOption1.click();
+
+        WebElement changeOption2 = driver.findElement(By.xpath("//*[@id=\"1\"]/option[2]"));
+        Thread.sleep(2000);
+        changeOption2.click();
+
+        WebElement changeOption3 = driver.findElement(By.xpath("//*[@id=\"1\"]/option[3]"));
+        Thread.sleep(2000);
+        changeOption3.click();
+
+        WebElement changeButton = driver.findElement(By.xpath("//*[@id=\"1\"][@class=\"button\"]"));
+        Thread.sleep(2000);
+        changeButton.click();
 
         WebElement addTeamMemberPage = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div/a[5]"));
         Thread.sleep(2000);
@@ -175,11 +191,11 @@ public class TestEmlak {
         Thread.sleep(2000);
         arrangementTeamMemberPage.click();
 
-        WebElement arrangementBox = driver.findElement(By.xpath("//*[@id=\"9\"][@type=\"text\"]"));
+        WebElement arrangementBox = driver.findElement(By.xpath("//*[@id=\"10\"][@type=\"text\"]"));
         arrangementBox.click();
         arrangementBox.sendKeys("selcenfethiye");
 
-        WebElement arrangementButton = driver.findElement(By.xpath("//*[@id=\"9\"][@class=\"button\"]"));
+        WebElement arrangementButton = driver.findElement(By.xpath("//*[@id=\"10\"][@class=\"button\"]"));
         Thread.sleep(1000);
         arrangementButton.click();
 
@@ -187,7 +203,7 @@ public class TestEmlak {
         Thread.sleep(2000);
         deleteTeamMemberPage.click();
 
-        WebElement deleteButton2 = driver.findElement(By.id("9"));
+        WebElement deleteButton2 = driver.findElement(By.id("10"));
         deleteButton2.click();
 
         WebElement editCompanyInformationPage = driver.findElement(By.xpath("//*[@id='root']/div/div/div[1]/div/a[8]"));
